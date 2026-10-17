@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Institucional | San Juan Evangelista</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eff5fc;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #163764;
+        }
+
+        .contenedor {
+            display: flex;
+            width: 100%;
+            max-width: 1100px;
+            min-height: 680px;
+            background: white;
+            box-shadow: 0 8px 30px rgba(22, 55, 100, 0.15);
+        }
+
+        .panel-izquierdo {
+            width: 46.36%;
+            padding: 25px;
+            background: #163764;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .foto-colegio {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background: #1f4577;
+            border: 1px solid #54749c;
+        }
+
+        .nombre-colegio {
+            margin-top: 25px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .descripcion {
+            margin-top: 18px;
+            color: #cde0f8;
+            font-weight: bold;
+        }
+
+        .frase {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .panel-derecho {
+            flex: 1;
+            padding: 35px 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 140px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 34px;
+            text-align: center;
+        }
+
+        .instruccion {
+            color: #647184;
+            text-align: center;
+            margin: 12px 0 35px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-top: 8px;
+            border: 1px solid #b8c9de;
+            background: #eff5fc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .fila-contrasena {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .fila-contrasena input {
+            flex: 1;
+            min-width: 0;
+        }
+
+        button {
+            padding: 13px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .boton-mostrar {
+            margin-top: 8px;
+            background: #e0ebf9;
+            color: #163764;
+            white-space: nowrap;
+        }
+
+        .boton-ingresar {
+            width: 100%;
+            margin-top: 15px;
+            background: #163764;
+            color: white;
+            font-size: 16px;
+        }
+
+        .boton-ingresar:hover {
+            background: #244f85;
+        }
+
+        #mensaje {
+            min-height: 48px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .pie {
+            margin-top: auto;
+            padding-top: 20px;
+            color: #788291;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 15px;
+                align-items: flex-start;
+            }
+
+            .contenedor {
+                flex-direction: column;
+            }
+
+            .panel-izquierdo {
+                width: 100%;
+            }
+
+            .foto-colegio {
+                height: 240px;
+            }
+
+            .panel-derecho {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .pie {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <!-- PANEL IZQUIERDO -->
+        <section class="panel-izquierdo">
+
+            <img
+                class="foto-colegio"
+                src="colegio - copia.jpg"
+                alt="Fotografía del colegio"
+            >
+
+            <div class="nombre-colegio">
+                UNIDAD EDUCATIVA<br>
+                SAN JUAN EVANGELISTA
+            </div>
+
+            <div class="descripcion">
+                PLATAFORMA INSTITUCIONAL
+            </div>
+
+            <div class="frase">
+                Aprender · Crecer · Alcanzar metas
+            </div>
+
+        </section>
+
+        <!-- PANEL DERECHO -->
+        <section class="panel-derecho">
+
+            <img
+                class="logo"
+                src="logo.png"
+                alt="Logotipo institucional"
+            >
+
+            <h1>¡Bienvenido!</h1>
+
+            <p class="instruccion">
+                Ingresa tus credenciales para continuar
+            </p>
+
+            <form id="formulario">
+
+                <label for="usuario">Usuario</label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Ingresa tu usuario"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="contrasena">Contraseña</label>
+
+                <div class="fila-contrasena">
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="boton-mostrar"
+                        id="botonMostrar"
+                    >
+                        Mostrar
+                    </button>
+
+                </div>
+
+                <button type="submit" class="boton-ingresar">
+                    INICIAR SESIÓN
+                </button>
+
+                <p id="mensaje" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <div class="pie">
+                Acceso exclusivo para usuarios autorizados
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+        const usuario = document.getElementById("usuario");
+        const contrasena = document.getElementById("contrasena");
+        const botonMostrar = document.getElementById("botonMostrar");
+        const mensaje = document.getElementById("mensaje");
+
+        // Mostrar u ocultar la contraseña
+        botonMostrar.addEventListener("click", function () {
+            const visible = contrasena.type === "text";
+
+            contrasena.type = visible ? "password" : "text";
+            botonMostrar.textContent = visible ? "Mostrar" : "Ocultar";
+        });
+
+        // Validación de demostración
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            if (
+                usuario.value.trim() === "Jhonathan" &&
+                contrasena.value === "050924"
+            ) {
+                mensaje.style.color = "#16834a";
+                mensaje.textContent =
+                    "¡Bienvenido, Jhonathan! Has iniciado sesión correctamente.";
+            } else {
+                mensaje.style.color = "#be2d37";
+                mensaje.textContent =
+                    "Usuario o contraseña incorrectos.";
+            }
+        });
+    </script>
+
+</body>
+</html>
